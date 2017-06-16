@@ -1,4 +1,5 @@
-import { ActLink } from './ActLink'
+import React from 'react'
+import ActLink from './ActLink'
 
 const Navbar = () => (
   <nav className="navbar">

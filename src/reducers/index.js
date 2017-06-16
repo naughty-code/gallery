@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { gallery } from './gallery';
+import gallery from './gallery';
 
 const reducers = combineReducers({
   ...gallery

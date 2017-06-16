@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import classNames from 'classnames';
-import { Home, About, Topics, Navbar } from './components';
+import  Home from './components/Home';
+import About from './components/About';
+import Topics from './components/Topics';
+import Navbar from './components/Navbar';
 import { Route } from 'react-router';
 
 
@@ -9,11 +11,11 @@ import { Route } from 'react-router';
 const App = () => (
     <div>
       <Navbar/>
-      <article className="main-content">
+      <div className="main-content">
         <Route exact path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/topics" component={Topics}/>
-      </article>
+      </div>
     </div>
 )
 export default App;

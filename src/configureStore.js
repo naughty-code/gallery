@@ -4,13 +4,12 @@ import {
   combineReducers,
   applyMiddleware
 } from 'redux';
-
 import {
   routerReducer,
   routerMiddleware,
   push } from 'react-router-redux'
-
 import reducers from './reducers'
+import createLogger from 'redux-logger'
 
 const configureStore = () => {
 
@@ -18,7 +17,10 @@ const configureStore = () => {
   const history = createHistory()
 
   // Build the middleware for intercepting and dispatching navigation actions
-  const middleware = routerMiddleware(history)
+  const middlewares = [
+    routerMiddleware(history),
+    createLogger
+   ]
 
   // Add the reducer to your store on the `router` key
   // Also apply our middleware for navigating
@@ -27,7 +29,7 @@ const configureStore = () => {
       ...reducers,
       router: routerReducer
     }),
-    applyMiddleware(middleware)
+    applyMiddleware(...middlewares)
   )
 
   return {store, history};

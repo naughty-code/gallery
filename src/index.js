@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { Route } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import App from './App'
-import { configureStore } from "./configureStore"
+import configureStore from "./configureStore"
 
 import registerServiceWorker from './registerServiceWorker';
 //import 'bootstrap/dist/css/bootstrap.css';

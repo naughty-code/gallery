@@ -1,33 +1,33 @@
-import { ActLink } from './ActLink'
+import React from 'react';
+import ActLink from './ActLink';
 
 const Sidebar = ({match}) => {
   const props = {
-    match,
-    className: classNames('nav-link')
+    className: 'nav-link'
   };
   return (
     <nav>
         <ul className="sidebar">
           <li>
-            <NavLink
+            <ActLink
               to={`${match.url}/rendering`}
               {...props}>
               Rendering
-            </NavLink>
+            </ActLink>
           </li>
           <li>
-            <NavLink
+            <ActLink
               to={`${match.url}/components`}
               {...props}>
               Components
-            </NavLink>
+            </ActLink>
           </li>
           <li>
-            <NavLink
+            <ActLink
               to={`${match.url}/props-v-state`}
               {...props}>
               Props v. State
-            </NavLink>
+            </ActLink>
           </li>
         </ul>
     </nav>

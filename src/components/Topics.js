@@ -1,5 +1,6 @@
-import { Sidebar } from './Sidebar';
-import { Router } from 'react-router';
+import React from 'react'
+import Sidebar from './Sidebar';
+import { Route } from 'react-router';
 
 const Topic = ({ match }) => (
   <div>
