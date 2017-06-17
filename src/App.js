@@ -1,9 +1,5 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import  Home from './components/Home';
-import About from './components/About';
-import Topics from './components/Topics';
-import Navbar from './components/Navbar';
+import React from 'react';
+import { Home, About, Topics, Navbar } from './components';
 import { Route } from 'react-router';
 
 

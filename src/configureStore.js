@@ -1,13 +1,9 @@
 import createHistory from 'history/createBrowserHistory';
 import {
   createStore,
-  combineReducers,
   applyMiddleware
 } from 'redux';
-import {
-  routerReducer,
-  routerMiddleware,
-  push } from 'react-router-redux'
+import { routerMiddleware } from 'react-router-redux'
 import reducers from './reducers'
 import createLogger from 'redux-logger'
 
@@ -25,10 +21,7 @@ const configureStore = () => {
   // Add the reducer to your store on the `router` key
   // Also apply our middleware for navigating
   const store = createStore(
-    combineReducers({
-      ...reducers,
-      router: routerReducer
-    }),
+    reducers,
     applyMiddleware(...middlewares)
   )
 

@@ -12,7 +12,7 @@ const Topics = ({ match }) => (
   <div>
     <h2 className="main-content-title">Topics</h2>
     <div className="topics-content">
-      <Sidebar match={match}/>
+      <Sidebar routes={["rendering", "state vs props", "hello"]} match={match}/>
       <Route path={`${match.url}/:topicId`} component={Topic}/>
       <Route exact path={match.url} render={() => (
         <h3 className="topic-title">Please select a topic.</h3>

@@ -84,3 +84,18 @@ ul {
 .topics-content {
   display: flex;
 }
+
+.main-content-columns {
+  display: flex;
+}
+
+.search-sidebar {
+  input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: $light-grey;
+  }
+  width: 300px;
+  padding: 10px;
+}
