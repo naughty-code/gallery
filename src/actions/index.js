@@ -1,14 +1,33 @@
-let item = 1;
+import { getIsFetching } from '../reducers'
+import { range } from 'lodash'
 
-const generateItems= () => {
-  let newItems = []
-  for(let i = 0; i < 5; i++){
-    newItems.push(Math.random())
-  }
-  return newItems
-}
 
-export const fetchPage = () => ({
-  type: 'FETCH_PAGE',
-  items: generateItems()
+const generateItems= () => (
+  range(20).map(() =>
+    ({
+      alt: Math.random()
+    })
+  )
+)
+
+
+const requestPage = () => ({
+  type: 'REQUEST_PAGE',
 })
+
+const recievePage = () => ({
+  type: 'RECIEVE_PAGE',
+  page: {
+    items: generateItems()
+  }
+})
+
+export const fetchPage = () => (dispatch, getState) => {
+  if(getIsFetching(getState()) === true){
+    return
+  }
+  dispatch(requestPage())
+
+  setTimeout(() => dispatch(recievePage()), 1000)
+  return
+}

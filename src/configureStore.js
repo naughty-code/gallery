@@ -6,6 +6,7 @@ import {
 import { routerMiddleware } from 'react-router-redux'
 import reducers from './reducers'
 import createLogger from 'redux-logger'
+import thunk from 'redux-thunk'
 
 const configureStore = () => {
 
@@ -14,6 +15,7 @@ const configureStore = () => {
 
   // Build the middleware for intercepting and dispatching navigation actions
   const middlewares = [
+    thunk,
     routerMiddleware(history),
     createLogger
    ]

@@ -1,42 +1,32 @@
 import React, { Component } from 'react'
-import Infinite from 'react-infinite'
+import Page from './GalleryPage'
+import InfiniteScroll from 'redux-infinite-scroll'
 import { connect } from 'react-redux'
 import { fetchPage } from '../actions'
-import { getItems } from '../reducers/gallery'
+import { getPages, getIsFetching } from '../reducers'
 import { withRouter } from 'react-router'
 
 const mapStateToProps = (state, ownProps) => ({
-  items: getItems(state)
+  pages: getPages(state),
+  isFetching: getIsFetching(state)
 })
 
-// class Gallery extends Component {
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//       isLoading: false,
-//     };
-//   }
-//
-//   loadMore = () => {
-//     this.setState({isLoading: true});
-//     this.props.fetchPage();
-//     this.setState({isLoading: false});
-//   }
-//
-//   render = () => {
-//     return (
-//       <InfiniteScroll loadingMore={this.state.isLoading} loadMore={this.loadMore}>
-//         {this.props.items.map((item, index) => <div key={index}>{item}</div>)}
-//       </InfiniteScroll>
-//     );
-//   }
-// }
+// const mapDispatchToProps = (dispatch, ownProps) => ({
+//   fetchItem
+// })
 
-const Gallery = ({ items, fetchPage }) => (
-  <Infinite elementHeight={50} useWindowAsScrollContainer>
-    {items.map((item, index) => <div key={index} style={height: "50px"}>{item}</div>)}
-  </Infinite>
-)
+const Gallery = ({ pages, isFetching, fetchPage}) => (
+      <InfiniteScroll
+        elementIsScrollable={false}
+        loadingMore={isFetching}
+        loadMore={fetchPage}>
+        {
+          pages.map((page, i) =>
+          <Page key={i} items={page.items}/>
+          )
+        }
+      </InfiniteScroll>
+  )
 
 const ScrollGallery = withRouter(connect(
   mapStateToProps,

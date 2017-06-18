@@ -1,20 +1,29 @@
+import { range } from 'lodash'
 
 const initialState = {
-  items: Array(50).fill("Hello")
+  pages: [
+    {
+      items: range(20).map(() => ({alt: Math.random()}))
+    }
+  ],
 };
 
 const gallery = (state = initialState, action) => {
   switch (action.type) {
-    case 'FETCH_PAGE':
+    case 'REQUEST_PAGE':
       return {
         ...state,
-        items: [...state.items, ...action.items]
+        isFetching: true,
       };
+    case 'RECIEVE_PAGE':
+      return {
+        ...state,
+        pages: [...state.pages, action.page],
+        isFetching: false
+      }
     default:
       return state;
   }
 }
 
 export default gallery;
-
-export const getItems = (state) => state.gallery.items;
