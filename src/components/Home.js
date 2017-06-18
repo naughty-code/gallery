@@ -15,7 +15,9 @@ const Home = ({ match }) => {
           <div className="search-sidebar-tags">
           </div>
         </div>
-        <Gallery/>
+        <div className="gallery-content">
+          <Gallery/>
+        </div>
       </div>
     </div>
   );

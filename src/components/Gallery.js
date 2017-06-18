@@ -22,7 +22,11 @@ const Gallery = ({ pages, isFetching, fetchPage}) => (
         loadMore={fetchPage}>
         {
           pages.map((page, i) =>
-          <Page key={i} items={page.items}/>
+          <Page
+            key={i}
+            items={page.items}
+            rowNumber={5}
+          />
           )
         }
       </InfiniteScroll>

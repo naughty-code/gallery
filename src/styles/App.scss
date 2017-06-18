@@ -99,3 +99,26 @@ ul {
   width: 300px;
   padding: 10px;
 }
+
+.gallery-content {
+  flex: 1;
+}
+
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.thumb {
+  box-sizing: content-box;
+  width: 150px;
+  height: 150px;
+  background-color: $light-grey;
+  border-right: solid white;
+}

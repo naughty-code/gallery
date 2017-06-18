@@ -74,3 +74,22 @@ ul {
     padding: 10px;
     border: none;
     background-color: #eee; }
+
+.gallery-content {
+  flex: 1; }
+
+.gallery-page {
+  display: flex;
+  flex-direction: column; }
+
+.gallery-row {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px; }
+
+.thumb {
+  box-sizing: content-box;
+  width: 150px;
+  height: 150px;
+  background-color: #eee;
+  border-right: solid white; }

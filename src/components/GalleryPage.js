@@ -2,9 +2,11 @@ import React from 'react'
 import { chunk } from 'lodash'
 
 const GalleryItem = ({ src, alt }) => (
-  <div className="gallery-item">
-    <img src={src} alt={alt}>
-    </img>
+  <div className="thumb">
+    <a>
+      <img src={src} alt={alt}>
+      </img>
+    </a>
   </div>
 )
 
