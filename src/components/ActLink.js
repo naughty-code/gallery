@@ -1,12 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const ActLink = ({className, exact, to, children}) => (
+const ActLink = ({className, exact, to, children, activeClassName}) => (
         <NavLink
-          className={className}
-          exact = {false || exact}
-          activeClassName="active"
-          to={to}> {children}
+          className={ className }
+          exact = {exact}
+          activeClassName={ activeClassName || "active" }
+          to={to}>
+          {children}
         </NavLink>
 )
 

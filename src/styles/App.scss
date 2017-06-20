@@ -87,17 +87,23 @@ ul {
 
 .main-content-columns {
   display: flex;
+  padding-top: 10px;
 }
 
 .search-sidebar {
-  input[type=text] {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background-color: $light-grey;
+  > .search-bar-container {
+    > input[type=text] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: $light-grey;
+    }
   }
-  width: 300px;
   padding: 10px;
+}
+
+.search-bar-container {
+  padding-bottom: 10px;
 }
 
 .gallery-content {

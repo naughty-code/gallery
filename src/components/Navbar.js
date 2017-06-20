@@ -1,12 +1,16 @@
 import React from 'react'
 import ActLink from './ActLink'
+import { capitalize } from 'lodash'
 
-const Navbar = () => (
+const Navbar = ({ routes }) => (
   <nav className="navbar">
     <div className="nav-links">
-        <ActLink className="nav-link" exact to="/"> Home </ActLink>
-        <ActLink className="nav-link" to="/about"> About </ActLink>
-        <ActLink className="nav-link" to="/topics"> Topics </ActLink>
+      { routes.map(({ to, name, exact }) =>
+          <ActLink className="nav-link" exact={exact} to={to}>
+            { name }
+          </ActLink>
+        )
+      }
     </div>
   </nav>
 )

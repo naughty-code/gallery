@@ -64,16 +64,19 @@ ul {
   display: flex; }
 
 .main-content-columns {
-  display: flex; }
+  display: flex;
+  padding-top: 10px; }
 
 .search-sidebar {
-  width: 300px;
   padding: 10px; }
-  .search-sidebar input[type=text] {
+  .search-sidebar > .search-bar-container > input[type=text] {
     width: 100%;
     padding: 10px;
     border: none;
     background-color: #eee; }
+
+.search-bar-container {
+  padding-bottom: 10px; }
 
 .gallery-content {
   flex: 1; }

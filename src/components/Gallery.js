@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import Page from './GalleryPage'
 import InfiniteScroll from 'redux-infinite-scroll'
 import { connect } from 'react-redux'
 import { fetchPage } from '../actions'
 import { getPages, getIsFetching } from '../reducers'
 import { withRouter } from 'react-router'
+import { GalleryPage, SearchSidebar } from '../components'
 
 const mapStateToProps = (state, ownProps) => ({
   pages: getPages(state),
@@ -15,14 +15,33 @@ const mapStateToProps = (state, ownProps) => ({
 //   fetchItem
 // })
 
+//test routes
+const routes = [
+  {
+    to: "/tags",
+    name: "Tags"
+  },
+  {
+    to: "/foo",
+    name: "Foo"
+  },
+  {
+    to: "/bar",
+    name: "Bar"
+  }
+]
+
 const Gallery = ({ pages, isFetching, fetchPage}) => (
+  <div className="main-content-columns">
+    <SearchSidebar routes={routes}/>
+    <div className="gallery-content">
       <InfiniteScroll
         elementIsScrollable={false}
         loadingMore={isFetching}
         loadMore={fetchPage}>
         {
           pages.map((page, i) =>
-          <Page
+          <GalleryPage
             key={i}
             items={page.items}
             rowNumber={5}
@@ -30,6 +49,9 @@ const Gallery = ({ pages, isFetching, fetchPage}) => (
           )
         }
       </InfiniteScroll>
+    </div>
+  </div>
+
   )
 
 const ScrollGallery = withRouter(connect(
