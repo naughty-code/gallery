@@ -17,7 +17,7 @@ export default class FluidNavbar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="faded" light toggleable>
+        <Navbar inverse color="inverse" toggleable>
           <NavbarToggler right onClick={this.toggle} />
           <NavbarBrand href="/">reactstrap</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
