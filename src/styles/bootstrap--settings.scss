@@ -1,0 +1,151 @@
+// /*
+//   Add into this file the variables that are going
+//   to be used by Bootstrap to delivery its grid and
+//   overall styles. A complete list of variables
+//   can be found within the bootstrap module at node_modules
+//   within the _variables.scss file or at:
+//   https://v4-alpha.getbootstrap.com/getting-started/options/
+//  */
+
+
+// /**
+//  * Colors - styles/_settings--palette.scss
+//  */
+//
+//
+// /**
+//  * Body
+//  */
+//
+// $body-bg:                              $dark;
+//
+// /**
+//  * Forms
+//  */
+//
+// $form-icon-danger:                     none;
+// $form-icon-success:                    none;
+// $input-color:                          rgba($black, 0.6);
+// $input-color-placeholder:              rgba($black, 0.4);
+// $input-border-color:                   rgba($black, 0.1);
+// $input-border-focus:                   $seaweed;
+// $input-border-radius:                  100px;
+// $input-padding-y:                      .7rem;
+// $input-padding-x:                      1.6rem;
+// $input-btn-border-width:               2px;
+// $input-box-shadow:                     none;
+//
+// $form-group-margin-bottom:             1.5rem;
+//
+// $text-muted:                           $color--accent;
+//
+// $form-check-input-gutter:              2rem;
+//
+// /**
+//  * Scaffolding
+//  */
+//
+// /**
+//  * Spacing
+//  */
+//
+// /**
+//  * Typography - styles/_settings--fonts.scss
+//  */
+//
+// $hr-border-color:                       $gray-lighter;
+// $link-color:                            $color--accent;
+// $link-hover-color:                      rgba($black, .8);
+//
+// /**
+//  * Grid system
+//  */
+//
+// /**
+//  * Components
+//  */
+//
+// $border-radius:                             .5rem;
+//
+// $list-group-item-padding-y:                 .75rem;
+// $list-group-item-padding-x:                 0;
+// $list-group-border-radius:                  0;
+//
+// $progress-border-radius:                    100px;
+// $progress-height:                           1.5rem;
+//
+// $card-border-color:                         $gray-lighter;
+// $card-border-width:                         1px;
+// $card-border-radius:                        $border-radius;
+// $card-columns-gap:                          1.5rem;
+// $card-columns-count:                        4;
+// $card-bg:                                   $white;
+//
+// /**
+//  * Dropdown
+//  */
+//
+// $dropdown-link-color:                      $aluminium;
+//
+// /**
+//  * Navbar
+//  */
+//
+// $nav-link-padding-x:                        1rem;
+// $nav-link-padding-y:                        0.5rem;
+// $nav-link-padding:                          $nav-link-padding-y $nav-link-padding-x;
+//
+// /**
+//  * Pills
+//  */
+//
+// $nav-pills-border-radius:                   100px;
+// $nav-pills-active-link-bg:                  rgba($caribbean-green, 0.1);
+//
+// /**
+//  * Buttons
+//  */
+//
+// $btn-primary-color:                         $white;
+// $btn-primary-bg:                            $color--accent;
+// $btn-primary-border:                        $btn-primary-bg;
+// $btn-secondary-color:                       $color--accent;
+// $btn-secondary-bg:                          $solitude;
+// $btn-secondary-border:                      $solitude;
+// $btn-success-color:                         $white;
+// $btn-success-bg:                            $golden;
+// $btn-success-border:                        $golden;
+// $btn-warning-color:                         $grapefruit;
+// $btn-warning-bg:                            rgba($grapefruit, .1);
+// $btn-warning-border:                        transparent;
+// $btn-info-color:                            $white;
+// $btn-info-bg:                               $gray-lighter;
+// $btn-info-border:                           $gray-lighter;
+// $btn-border-radius:                         6px;
+// $btn-padding-x:                             1rem;
+// $btn-padding-y:                             .85rem;
+//
+// // set of rules in order to remove outlines on focus
+// $btn-box-shadow:                            transparent;
+// $btn-focus-box-shadow:                      transparent;
+// $btn-active-box-shadow:                     transparent;
+// $enable-shadows:                            true;
+//
+// /**
+//  * Alerts
+//  */
+//
+// $alert-success-bg:                          $white;
+// $alert-success-text:                        $black;
+// $alert-border-width:                        0;
+// $alert-padding-y:                           1rem;
+//
+// /**
+//  * Modals
+//  */
+//
+// $modal-dialog-sm-up-margin-y:               50px;
+// $modal-content-border-width:                0px;
+// $modal-content-xs-box-shadow:               map-get($material-layer-list, 3);
+// $modal-content-sm-up-box-shadow:            map-get($material-layer-list, 3);
+// $modal-backdrop-opacity:                    1;
