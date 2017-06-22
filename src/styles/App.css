@@ -94,11 +94,15 @@ ul {
 .gallery-row {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 10px; }
+  flex-wrap: wrap;
+  align-items: center;
+}
 
 .thumb {
   box-sizing: content-box;
   width: 250px;
   height: 250px;
   background-color: #eee;
-  border-right: solid white; }
+  margin-bottom: 5px;
+  margin-left: 1px;
+ }

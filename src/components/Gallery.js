@@ -44,7 +44,7 @@ const Gallery = ({ pages, isFetching, fetchPage}) => (
           <GalleryPage
             key={i}
             items={page.items}
-            rowNumber={5}
+            rowNumber={6}
           />
           )
         }
