@@ -122,8 +122,8 @@ ul {
 
 .gallery-row {
   display: flex;
-  justify-content: space-around;
-  padding-bottom: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .thumb {
@@ -131,5 +131,6 @@ ul {
   width: 250px;
   height: 250px;
   background-color: $light-grey;
-  border-right: solid white;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }

@@ -89,15 +89,12 @@ ul {
 
 .gallery-page {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  flex-direction: column; }
 
 .gallery-row {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
 
 .thumb {
   box-sizing: content-box;
@@ -105,5 +102,4 @@ ul {
   height: 250px;
   background-color: #eee;
   margin-right: 5px;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
