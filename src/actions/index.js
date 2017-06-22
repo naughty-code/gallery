@@ -3,7 +3,7 @@ import { range } from 'lodash'
 
 
 const generateItems= () => (
-  range(20).map(() =>
+  range(18).map(() =>
     ({
       alt: Math.random()
     })

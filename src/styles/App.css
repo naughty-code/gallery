@@ -89,13 +89,14 @@ ul {
 
 .gallery-page {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: center;
+}
 
 .gallery-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .thumb {
@@ -103,6 +104,6 @@ ul {
   width: 250px;
   height: 250px;
   background-color: #eee;
+  margin-right: 5px;
   margin-bottom: 5px;
-  margin-left: 1px;
- }
+}
