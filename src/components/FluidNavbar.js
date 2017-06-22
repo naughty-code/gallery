@@ -1,5 +1,17 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  InputGroup,
+  InputGroupButton,
+  Input,
+  Button
+} from 'reactstrap';
 
 
 export default class FluidNavbar extends React.Component {
@@ -19,7 +31,11 @@ export default class FluidNavbar extends React.Component {
       <div>
         <Navbar inverse color="inverse" toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="/">Home</NavbarBrand>
+          <InputGroup>
+            <Input color="secondary" placeholder="Search..." />
+            <InputGroupButton> Go!</InputGroupButton>
+          </InputGroup>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
