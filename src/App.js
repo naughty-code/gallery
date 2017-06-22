@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, About, Topics, Gallery, Navbar } from './components';
+import { Home, About, Topics, Navbar } from './components';
 import { Route } from 'react-router';
 
 //routes to make nav bar buttons

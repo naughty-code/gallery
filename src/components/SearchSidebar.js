@@ -2,12 +2,12 @@ import React from 'react'
 import Sidebar from './Sidebar'
 
 const SearchSidebar = ({ routes }) => (
-  <div className="search-sidebar">
-    <div className="search-bar-container">
+  <nav className="search-sidebar">
+    <div className="search-sidebar__search-bar">
       <input type="text" placeholder="Search..."/>
     </div>
     <Sidebar routes={ routes }/>
-  </div>
+  </nav>
 )
 
 export default SearchSidebar

@@ -6,6 +6,7 @@ $green: #4CAF50;
   margin: 0px;
   padding: 0px;
 }
+
 html {
   box-sizing: border-box;
 }
@@ -20,10 +21,11 @@ body {
         &.nav-link {
           text-decoration: none;
           color: black;
-          padding: 10px;
           display: block;
           flex: 1;
-          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         &.active {
           background-color: $green;
@@ -38,6 +40,7 @@ body {
       flex: 1;
   }
   display: flex;
+  min-height: 50px;
 }
 
 ul {
@@ -91,19 +94,21 @@ ul {
 }
 
 .search-sidebar {
-  > .search-bar-container {
-    > input[type=text] {
+  &__search-bar {
+    &> input[type=text] {
       width: 100%;
       padding: 10px;
       border: none;
       background-color: $light-grey;
     }
+      padding-bottom: 10px;
   }
   padding: 10px;
-}
-
-.search-bar-container {
-  padding-bottom: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: 100%;
 }
 
 .gallery-content {
@@ -123,8 +128,8 @@ ul {
 
 .thumb {
   box-sizing: content-box;
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   background-color: $light-grey;
   border-right: solid white;
 }
