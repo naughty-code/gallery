@@ -10,8 +10,10 @@ import {
   InputGroup,
   InputGroupButton,
   Input,
-  Button
+  Button,
+  Form
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 export default class FluidNavbar extends React.Component {
@@ -31,10 +33,10 @@ export default class FluidNavbar extends React.Component {
       <div>
         <Navbar inverse color="inverse" toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand href="/">Home</NavbarBrand>
+          <NavbarBrand tag={Link} to={'/'}>Home</NavbarBrand>
           <InputGroup>
-            <Input color="secondary" placeholder="Search..." />
-            <InputGroupButton> Go!</InputGroupButton>
+            <Input color="inverse" placeholder="Search..." />
+            <InputGroupButton> <Button color="secondary">Go!</Button></InputGroupButton>
           </InputGroup>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
