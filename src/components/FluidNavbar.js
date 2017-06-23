@@ -33,7 +33,7 @@ export default class FluidNavbar extends React.Component {
       <div>
         <Navbar inverse color="inverse" toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand tag={Link} to={'/'}>Home</NavbarBrand>
+          <NavbarBrand tag={Link} to={'/'}>H</NavbarBrand>
           <InputGroup>
             <Input color="inverse" placeholder="Search..." />
             <InputGroupButton> <Button color="secondary">Go!</Button></InputGroupButton>
