@@ -1,0 +1,105 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif; }
+
+.navbar {
+  display: flex;
+  min-height: 50px; }
+  .navbar .nav-links {
+    background-color: #eee;
+    display: flex;
+    flex: 1; }
+    .navbar .nav-links a.nav-link {
+      text-decoration: none;
+      color: black;
+      display: block;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .navbar .nav-links a.active {
+      background-color: #4CAF50;
+      color: white; }
+    .navbar .nav-links a:hover:not(.active) {
+      background-color: #e1e1e1; }
+
+ul {
+  padding: 0px; }
+  ul.sidebar {
+    list-style-type: none;
+    background-color: #eee;
+    text-align: center;
+    width: 15em; }
+  ul li a {
+    text-decoration: none; }
+    ul li a.nav-link {
+      text-decoration: none;
+      color: black;
+      padding: 10px;
+      display: block;
+      flex: 1;
+      text-align: center; }
+    ul li a.active {
+      background-color: #4CAF50;
+      color: white; }
+    ul li a:hover:not(.active) {
+      background-color: #e1e1e1; }
+
+.main-content-title {
+  padding: 10px; }
+
+.topic-title {
+  padding: 10px; }
+  .topic-title:first-letter {
+    text-transform: capitalize; }
+
+.topics-content {
+  display: flex; }
+
+.main-content-columns {
+  display: flex;
+  padding-top: 10px; }
+
+.search-sidebar {
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: 100%; }
+  .search-sidebar__search-bar {
+    padding-bottom: 10px; }
+    .search-sidebar__search-bar > input[type=text] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #eee; }
+
+.gallery-content {
+  flex: 1; }
+
+.gallery-page {
+  display: flex;
+  flex-direction: column; }
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.thumb {
+  box-sizing: content-box;
+  width: 250px;
+  height: 250px;
+  background-color: #eee;
+  margin-right: 5px;
+  margin-bottom: 5px; }

@@ -1,6 +1,6 @@
 import React from 'react';
+import { Home, About, Topics, Navbar } from './components';
 import { Route } from 'react-router';
-import { FluidNavbar } from './components';
 
 //routes to make nav bar buttons
 const routes = [
@@ -20,7 +20,13 @@ const routes = [
 ];
 
 const App = () => (
-  <FluidNavbar/>
-);
-
+    <div>
+      <Navbar routes={routes}/>
+      <div className="main-content">
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={About}/>
+        <Route path="/topics" component={Topics}/>
+      </div>
+    </div>
+)
 export default App;

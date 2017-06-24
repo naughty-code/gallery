@@ -1,5 +1,20 @@
-import FluidNavbar from './FluidNavbar';
+
+import About from './About'
+import Home from './Home'
+import Navbar from './Navbar'
+import Topics from './Topics'
+import Gallery from './Gallery'
+import GalleryPage from './GalleryPage'
+import Sidebar from './Sidebar'
+import SearchSidebar from './SearchSidebar'
 
 export {
-  FluidNavbar,
-}
+  About,
+  Home,
+  Navbar,
+  Sidebar,
+  SearchSidebar,
+  Topics,
+  Gallery,
+  GalleryPage
+};
