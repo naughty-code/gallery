@@ -1,0 +1,136 @@
+$light-grey: #eee;
+$green: #4CAF50;
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+.navbar {
+  .nav-links {
+      a {
+        &.nav-link {
+          text-decoration: none;
+          color: black;
+          display: block;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        &.active {
+          background-color: $green;
+          color: white;
+        }
+        &:hover:not(.active) {
+          background-color: darken($light-grey, 5%);
+        }
+      }
+      background-color: $light-grey;
+      display: flex;
+      flex: 1;
+  }
+  display: flex;
+  min-height: 50px;
+}
+
+ul {
+  &.sidebar{
+    list-style-type: none;
+    background-color: $light-grey;
+    text-align: center;
+    width: 15em;
+  }
+  li {
+    a {
+      &.nav-link {
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        display: block;
+        flex: 1;
+        text-align: center;
+      }
+      &.active {
+        background-color: $green;
+        color: white;
+      }
+      &:hover:not(.active) {
+        background-color: darken($light-grey, 5%);
+      }
+      text-decoration: none;
+    }
+  }
+  padding: 0px;
+}
+
+.main-content-title {
+  padding: 10px;
+}
+
+.topic-title {
+  &:first-letter{
+    text-transform: capitalize;
+  }
+  padding: 10px;
+}
+
+.topics-content {
+  display: flex;
+}
+
+.main-content-columns {
+  display: flex;
+  padding-top: 10px;
+}
+
+.search-sidebar {
+  &__search-bar {
+    &> input[type=text] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: $light-grey;
+    }
+      padding-bottom: 10px;
+  }
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+}
+
+.gallery-content {
+  flex: 1;
+}
+
+.gallery-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.thumb {
+  box-sizing: content-box;
+  width: 250px;
+  height: 250px;
+  background-color: $light-grey;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
