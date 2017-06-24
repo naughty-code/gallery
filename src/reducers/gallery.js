@@ -3,7 +3,7 @@ import { range } from 'lodash'
 const initialState = {
   pages: [
     {
-      items: []
+      items: range(20).map(() => ({alt: Math.random()}))
     }
   ],
 };
