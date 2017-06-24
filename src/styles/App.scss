@@ -1,4 +1,5 @@
 $light-grey: #eee;
+$dark-grey: #222;
 $green: #4CAF50;
 
 *, *:before, *:after {
@@ -15,6 +16,26 @@ body {
   padding: 0px;
   font-family: sans-serif;
 }
+
+// .navbar {
+//   .brand {
+//
+//   }
+//   a {
+//     text-align: center;
+//     text-decoration: none;
+//     color: white;
+//     display: block;
+//     &:hover {
+//       background-color: $light-grey;
+//     }
+//   }
+//   display: flex;
+//   background-color: $dark-grey;
+//   height: 50px;
+//   overflow: hidden;
+// }
+
 .navbar {
   .nav-links {
       a {
