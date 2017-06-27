@@ -2,3 +2,15 @@
 @import "_variables";
 // bootstrap inclusion (order matters)
 @import "bootstrap--custom";
+
+.search-bar {
+  flex: 1;
+}
+
+.nav-no-collapse-content {
+  width: 100%;
+}
+
+@include media-breakpoint-up(md) {
+
+}
