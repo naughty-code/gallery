@@ -22,7 +22,7 @@ const recievePage = () => ({
   }
 });
 
-export const fetchItems = () => (dispatch, getState) => {
+export const fetchPage = () => (dispatch, getState) => {
   if(getIsFetching(getState()) === true){
     return
   }

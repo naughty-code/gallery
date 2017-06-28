@@ -1,5 +1,7 @@
-import FluidNavbar from './FluidNavbar';
+import FluidFixedNavbar from './FluidFixedNavbar';
+import Page from './GalleryPage';
 
 export {
-  FluidNavbar,
+  FluidFixedNavbar,
+  Page,
 }

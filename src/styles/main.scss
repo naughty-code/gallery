@@ -3,14 +3,59 @@
 // bootstrap inclusion (order matters)
 @import "bootstrap--custom";
 
+$light-grey: #eee;
+
 .search-bar {
   flex: 1;
 }
-
 .nav-no-collapse-content {
   width: 100%;
 }
+.fixed-nav-padding {
+  height: 56px;
+}
+
+.gallery-pages-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-page {
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.thumb {
+  img {
+    width: 100%;
+    margin: auto;
+    background-color: $light-grey;
+  }
+  width: 100%;
+  height: 300px;
+  padding: 2.5px;
+}
+
+@include media-breakpoint-up(sm) {
+  .thumb {
+    width: (100% / 2);
+  }
+}
 
 @include media-breakpoint-up(md) {
+  .thumb {
+    width: (100% / 3);
+  }
+}
 
+@include media-breakpoint-up(lg) {
+  .thumb {
+    width: (100% / 4);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .thumb {
+    width: (100% / 5);
+  }
 }

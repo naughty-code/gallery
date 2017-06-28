@@ -5992,3 +5992,39 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 .nav-no-collapse-content {
   width: 100%; }
+
+.fixed-nav-padding {
+  height: 56px; }
+
+.gallery-pages-container {
+  display: flex;
+  flex-direction: column; }
+
+.gallery-page {
+  display: flex;
+  flex-wrap: wrap; }
+
+.thumb {
+  width: 100%;
+  height: 300px;
+  padding: 2.5px; }
+  .thumb img {
+    width: 100%;
+    margin: auto;
+    background-color: #eee; }
+
+@media (min-width: 576px) {
+  .thumb {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .thumb {
+    width: 33.33333%; } }
+
+@media (min-width: 992px) {
+  .thumb {
+    width: 25%; } }
+
+@media (min-width: 1200px) {
+  .thumb {
+    width: 20%; } }

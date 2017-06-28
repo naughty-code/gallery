@@ -1,29 +1,30 @@
 import React from 'react';
-import { Route } from 'react-router';
-import { FluidNavbar } from './components';
+import { Route, withRouter } from 'react-router';
 import ReduxInfiniteScroll from 'redux-infinite-scroll';
 import { connect } from 'react-redux';
-import { getItems, getIsFetching } from './reducers';
-import { fetchItems } from './actions'
+import { FluidFixedNavbar, Page } from './components';
+import { getPages, getIsFetching } from './reducers';
+import { fetchPage } from './actions';
 
-const Gallery = ({items, fetchItems, getIsFetching}) => (
+const Gallery = ({pages, fetchPage, getIsFetching}) => (
   <div>
-    <FluidNavbar/>
+    <FluidFixedNavbar/>
     <ReduxInfiniteScroll
+        className="gallery-pages-container"
         elementIsScrollable={false}
-        loadMore={fetchItems}
+        loadMore={fetchPage}
         isLoading={getIsFetching}
     >
-      {items.map(item => <div><img alt={item.alt}></img></div>)}
+      {pages.map(page => <Page items={page.items}/>)}
     </ReduxInfiniteScroll>
   </div>
 );
 
 const mapStateToProps = (state, ownProps) => ({
-  items: getItems(state),
+  pages: getPages(state),
   isLoading: getIsFetching(state)
 });
 
-const App = connect(mapStateToProps, {fetchItems})(Gallery);
+const App = withRouter(connect(mapStateToProps, {fetchPage})(Gallery));
 
 export default App;
