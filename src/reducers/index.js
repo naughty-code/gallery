@@ -9,5 +9,5 @@ const reducers = combineReducers({
 
 export default reducers;
 
-export const getPages = (state) => state.gallery.pages;
+export const getItems = (state) => state.gallery.pages;
 export const getIsFetching = (state) => state.gallery.isFetching;
